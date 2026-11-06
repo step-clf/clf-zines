@@ -1,0 +1,18 @@
+{
+  "name": "clf-zine-kit",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@fontsource/anton": "^5.3.0",
+    "@fontsource/bowlby-one": "^5.3.0",
+    "@fontsource/caveat": "^5.3.0",
+    "@fontsource/gaegu": "^5.3.0",
+    "@fontsource/patrick-hand": "^5.3.0",
+    "@fontsource/permanent-marker": "^5.3.0",
+    "@fontsource/rock-salt": "^5.3.0",
+    "@fontsource/shrikhand": "^5.3.0",
+    "@fontsource/special-elite": "^5.3.0",
+    "playwright": "^1.47.0",
+    "roughjs": "^4.6.6"
+  }
+}

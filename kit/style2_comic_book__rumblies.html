@@ -1,0 +1,133 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="common.css">
+<script src="node_modules/roughjs/bundled/rough.js"></script>
+<script src="helpers.js"></script>
+<style>
+:root{--ink:#2e0f40;--purple:#8628ae;--mag:#e44cfc;--aqua:#92f0f0;--butter:#f6e47a;--cream:#fff8ec}
+.slide{background:var(--purple);color:var(--ink)}
+.slide::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,.13) 3px,transparent 3.5px);background-size:22px 22px}
+.panel{position:absolute;padding:0}
+.cap{position:absolute;padding:14px 22px;font-family:"Patrick Hand";font-size:38px;line-height:1.1;text-transform:uppercase;z-index:8}
+.title{font-family:"Shrikhand";color:var(--butter);line-height:.95;-webkit-text-stroke:12px var(--ink);paint-order:stroke fill;text-shadow:8px 8px 0 var(--mag)}
+.sfx{position:absolute;font-family:"Shrikhand";color:var(--mag);-webkit-text-stroke:10px var(--ink);paint-order:stroke fill;text-shadow:5px 5px 0 var(--ink);z-index:9;line-height:.95}
+.bubble{position:absolute;padding:22px 32px;font-family:"Patrick Hand";font-size:44px;line-height:1.05;text-align:center;text-transform:uppercase;display:flex;align-items:center;justify-content:center;z-index:8}
+.char{position:absolute;z-index:7;filter:drop-shadow(6px 7px 0 rgba(46,15,64,.35))}
+.txt{position:absolute;font-family:"Patrick Hand";font-size:44px;line-height:1.15;z-index:8}
+.foot{position:absolute;bottom:26px;right:50px;font-family:"Patrick Hand";font-size:32px;color:#fff;z-index:9}
+.burst{clip-path:polygon(50% 0,58% 18%,75% 5%,73% 25%,93% 20%,82% 37%,100% 45%,82% 55%,95% 72%,74% 70%,76% 92%,59% 80%,50% 100%,41% 80%,24% 92%,26% 70%,5% 72%,18% 55%,0 45%,18% 37%,7% 20%,27% 25%,25% 5%,42% 18%)}
+.dots{background-image:radial-gradient(rgba(228,76,252,.28) 30%,transparent 33%);background-size:20px 20px}
+.dotsa{background-image:radial-gradient(rgba(60,190,200,.30) 30%,transparent 33%);background-size:20px 20px}
+.shake{position:absolute;pointer-events:none;z-index:8}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+ <symbol id="star" viewBox="0 0 100 100"><path d="M50 6 L61 38 L95 39 L68 59 L78 92 L50 72 L22 92 L32 59 L5 39 L39 38 Z" fill="currentColor" stroke="#2e0f40" stroke-width="6" stroke-linejoin="round"/></symbol>
+ <symbol id="shakeR" viewBox="0 0 100 120"><path d="M20 20 Q40 60 20 100 M50 8 Q78 60 50 112 M80 0 Q114 60 80 120" fill="none" stroke="#2e0f40" stroke-width="8" stroke-linecap="round"/></symbol>
+ <symbol id="shakeL" viewBox="0 0 100 120"><path d="M80 20 Q60 60 80 100 M50 8 Q22 60 50 112 M20 0 Q-14 60 20 120" fill="none" stroke="#2e0f40" stroke-width="8" stroke-linecap="round"/></symbol>
+</defs></svg>
+
+<!-- 1 COVER: Shimmer -->
+<section class="slide">
+  <div class="panel" data-rough="rect" data-fill="#2e0f40" data-stroke="#2e0f40" data-sw="6" style="left:40px;top:36px;width:1000px;height:110px"></div>
+  <div class="abs" style="left:70px;top:44px;font-family:Shrikhand;font-size:70px;color:#fff;z-index:3">cute little comics</div>
+  <div class="abs" style="right:70px;top:58px;font-family:'Patrick Hand';font-size:34px;color:var(--butter);line-height:1;text-align:right;z-index:3">ISSUE #2<br>TOY FACTS</div>
+  <div class="panel" data-rough="rect" data-fill="#fff8ec" data-sw="7" style="left:40px;top:180px;width:1000px;height:1130px"></div>
+  <div class="abs dots" style="left:52px;top:192px;width:976px;height:1106px"></div>
+  <div class="abs burst" style="left:180px;top:560px;width:720px;height:720px;background:var(--butter)"></div>
+  <div class="abs title" style="left:80px;top:215px;width:940px;font-size:122px;z-index:6;transform:rotate(-3deg)">the earthquake in your pants!</div>
+  <img class="char" src="img/shimmer.png" style="width:400px;left:340px;top:640px;transform:rotate(-14deg)">
+  <svg class="shake" style="width:110px;height:140px;left:220px;top:780px"><use href="#shakeL"/></svg>
+  <svg class="shake" style="width:110px;height:140px;left:760px;top:720px"><use href="#shakeR"/></svg>
+  <div class="sfx" style="left:70px;top:1100px;font-size:84px;transform:rotate(-8deg)">RUMBLE</div>
+  <div class="sfx" style="right:70px;top:620px;font-size:70px;transform:rotate(10deg);color:var(--aqua)">RUMBLE</div>
+  <div class="cap" data-rough="rect" data-fill="#92f0f0" data-sw="5" style="right:70px;top:1180px;width:460px;transform:rotate(2deg)">measurable on the richter scale? you decide.</div>
+</section>
+
+<!-- 2 buzzy vs rumbly -->
+<section class="slide">
+  <div class="cap" data-rough="rect" data-fill="#f6e47a" data-sw="5" style="left:60px;top:50px;width:600px">there are two kinds of vibes in this world...</div>
+  <div class="panel" data-rough="rect" data-fill="#efe3ff" data-sw="7" style="left:40px;top:150px;width:485px;height:1160px"></div>
+  <div class="panel" data-rough="rect" data-fill="#fbdcff" data-sw="7" style="left:555px;top:150px;width:485px;height:1160px"></div>
+  <div class="abs dots" style="left:567px;top:162px;width:461px;height:1136px"></div>
+  <div class="txt" style="left:80px;top:190px;width:410px;font-family:Shrikhand;font-size:58px;color:var(--purple)">buzzy</div>
+  <div class="txt" style="left:80px;top:270px;width:410px;font-size:34px;opacity:.75">(so many other toys)</div>
+  <div class="abs" style="left:110px;top:360px;font-family:'Patrick Hand';font-size:56px;color:#9b8aa8;transform:rotate(-4deg);z-index:8">bzzz... bzz...</div>
+  <svg class="char" viewBox="0 0 300 420" style="width:250px;height:350px;left:160px;top:470px;transform:rotate(-14deg);filter:none">
+    <rect x="70" y="20" width="160" height="330" rx="80" fill="#cfc8d6" stroke="#2e0f40" stroke-width="9"/>
+    <rect x="70" y="300" width="160" height="70" rx="20" fill="#a59cae" stroke="#2e0f40" stroke-width="9"/>
+    <circle cx="150" cy="335" r="12" fill="#2e0f40"/>
+    <line x1="118" y1="150" x2="138" y2="150" stroke="#2e0f40" stroke-width="8" stroke-linecap="round"/>
+    <line x1="162" y1="150" x2="182" y2="150" stroke="#2e0f40" stroke-width="8" stroke-linecap="round"/>
+    <line x1="132" y1="190" x2="168" y2="190" stroke="#2e0f40" stroke-width="8" stroke-linecap="round"/>
+  </svg>
+  <div class="abs" style="left:150px;top:820px;font-family:'Patrick Hand';font-size:32px;color:#9b8aa8;z-index:8">(generic buzzy vibe)</div>
+  <div class="txt" style="left:80px;top:900px;width:420px;font-size:52px;line-height:1.25">&#10007; crappy &amp; tinny<br>&#10007; can feel numbing<br>&#10007; fades away from the motor</div>
+  <div class="txt" style="left:595px;top:190px;width:410px;font-family:Shrikhand;font-size:58px;color:var(--mag);-webkit-text-stroke:6px var(--ink);paint-order:stroke fill">rumbly</div>
+  <div class="txt" style="left:595px;top:270px;width:410px;font-size:34px;opacity:.75">(every CLF toy!)</div>
+  <img class="char" src="img/jix_peri.png" style="width:380px;left:620px;top:420px;transform:rotate(10deg)">
+  <div class="sfx" style="left:580px;top:330px;font-size:70px;transform:rotate(-8deg);color:var(--butter)">RRRUMBLE!</div>
+  <svg class="shake" style="width:80px;height:110px;left:950px;top:520px"><use href="#shakeR"/></svg>
+  <div class="txt" style="left:595px;top:900px;width:420px;font-size:52px;line-height:1.25">&#10003; deep &amp; strong<br>&#10003; powerful, not numbing<br>&#10003; quieter, even at full blast</div>
+  <div class="foot">2/6</div>
+</section>
+
+<!-- 3 Starsi: every tip -->
+<section class="slide">
+  <div class="panel" data-rough="rect" data-fill="#fff8ec" data-sw="7" style="left:40px;top:40px;width:1000px;height:880px"></div>
+  <div class="abs dotsa" style="left:52px;top:52px;width:976px;height:856px"></div>
+  <div class="cap" data-rough="rect" data-fill="#f6e47a" data-sw="5" style="left:60px;top:60px;width:620px">rumbles travel through the whole toy...</div>
+  <img class="char" src="img/starsi_rose.png" style="width:560px;left:60px;top:250px;transform:rotate(-8deg)">
+  <svg class="shake" style="width:90px;height:120px;left:40px;top:330px"><use href="#shakeL"/></svg>
+  <svg class="shake" style="width:90px;height:120px;left:600px;top:560px"><use href="#shakeR"/></svg>
+  <svg class="shake" style="width:70px;height:90px;left:150px;top:780px;transform:rotate(-40deg)"><use href="#shakeL"/></svg>
+  <div class="bubble" data-rough="ellipse" data-fill="#fff" data-sw="5" data-tail="60,160,-80,200" style="left:640px;top:210px;width:370px;height:300px">I can feel it in ALL my tips!!</div>
+  <div class="sfx" style="left:690px;top:640px;font-size:64px;transform:rotate(8deg);color:var(--aqua)">ooh!</div>
+  <div class="panel" data-rough="rect" data-fill="#e44cfc" data-sw="7" style="left:40px;top:950px;width:1000px;height:360px"></div>
+  <div class="abs title" style="left:80px;top:990px;width:920px;font-size:70px;z-index:6;text-align:center;line-height:1.05;text-shadow:5px 5px 0 var(--purple)">every tip, edge &amp; nub. just think about the possibilities!</div>
+  <div class="foot">3/6</div>
+</section>
+
+<!-- 4 booth: Zeep -->
+<section class="slide">
+  <div class="panel" data-rough="rect" data-fill="#fff8ec" data-sw="7" style="left:40px;top:40px;width:1000px;height:420px"></div>
+  <div class="cap" data-rough="rect" data-fill="#f6e47a" data-sw="5" style="left:60px;top:60px">meanwhile, at the CLF booth...</div>
+  <div class="txt" style="left:90px;top:170px;width:900px;font-size:50px">folks touch our toys for the very first time and...</div>
+  <img class="char" src="img/starsi_coral.png" style="width:200px;right:80px;top:250px;transform:rotate(14deg)">
+  <div class="panel" data-rough="rect" data-fill="#92f0f0" data-sw="7" style="left:40px;top:490px;width:1000px;height:820px"></div>
+  <div class="abs burst" style="left:200px;top:540px;width:680px;height:680px;background:var(--butter);z-index:1"></div>
+  <img class="char" src="img/zeep_green.png" style="width:330px;left:375px;top:620px;transform:rotate(-6deg)">
+  <svg class="shake" style="width:110px;height:140px;left:250px;top:760px"><use href="#shakeL"/></svg>
+  <svg class="shake" style="width:110px;height:140px;left:720px;top:760px"><use href="#shakeR"/></svg>
+  <div class="sfx" style="left:70px;top:530px;font-size:110px;transform:rotate(-6deg)">WHOOOAAH!</div>
+  <div class="cap" data-rough="rect" data-fill="#fff" data-sw="5" style="right:70px;top:1190px;transform:rotate(-2deg)">every. single. time.</div>
+  <div class="foot">4/6</div>
+</section>
+
+<!-- 5 testimonial: Princette -->
+<section class="slide">
+  <div class="panel" data-rough="rect" data-fill="#fff8ec" data-sw="7" style="left:40px;top:40px;width:1000px;height:1270px"></div>
+  <div class="abs dots" style="left:52px;top:52px;width:976px;height:1246px"></div>
+  <div class="cap" data-rough="rect" data-fill="#f6e47a" data-sw="5" style="left:60px;top:60px;width:900px">once upon a time, Maestro Stefanos &mdash; kinkster extraordinaire &amp; 10+ years at Kink.com &mdash; tried Princette...</div>
+  <img class="char" src="img/princette_plat.png" style="width:440px;left:70px;top:330px;transform:rotate(-6deg)">
+  <svg class="shake" style="width:90px;height:120px;left:510px;top:380px"><use href="#shakeR"/></svg>
+  <div class="bubble" data-rough="rect" data-fill="#fff" data-sw="6" style="left:470px;top:560px;width:540px;height:420px;font-size:52px;line-height:1.08">"the strongest vibe in such a small form I've ever encountered!"</div>
+  <div class="sfx" style="left:90px;top:1060px;font-size:84px;transform:rotate(-5deg);color:var(--aqua)">they know their vibes.</div>
+  <div class="foot">5/6</div>
+</section>
+
+<!-- 6 CTA -->
+<section class="slide">
+  <div class="panel" data-rough="rect" data-fill="#fff8ec" data-sw="7" style="left:40px;top:40px;width:1000px;height:1000px"></div>
+  <div class="abs dotsa" style="left:52px;top:52px;width:976px;height:976px"></div>
+  <div class="abs title" style="left:80px;top:80px;width:920px;font-size:112px;z-index:6;transform:rotate(-3deg)">buy a fucker. feel the thunder.</div>
+  <img class="char" src="img/jix_lav.png" style="width:360px;left:70px;top:520px;transform:rotate(-8deg)">
+  <img class="char" src="img/starsi_coral.png" style="width:260px;left:380px;top:640px;transform:rotate(12deg)">
+  <img class="char" src="img/shimmer.png" style="width:200px;left:640px;top:740px;transform:rotate(16deg)">
+  <div class="bubble" data-rough="ellipse" data-fill="#fff" data-sw="5" data-tail="120,170,-20,240" style="left:600px;top:440px;width:400px;height:240px">want your world completely rocked?</div>
+  <svg class="abs" style="width:80px;height:80px;left:860px;top:900px;color:var(--butter);z-index:9"><use href="#star"/></svg>
+  <div class="panel" data-rough="rect" data-fill="#2e0f40" data-sw="7" style="left:40px;top:1070px;width:1000px;height:240px"></div>
+  <div class="abs" style="left:80px;top:1105px;font-family:Shrikhand;font-size:60px;color:var(--butter);z-index:5;line-height:1">to be continued...</div>
+  <div class="abs" style="left:80px;top:1190px;font-family:'Patrick Hand';font-size:50px;color:#fff;z-index:5">feel it yourself &rarr; LINK IN BIO</div>
+  <img class="abs" src="img/logo.png" style="width:220px;right:80px;top:1090px;z-index:5;filter:brightness(0) invert(1)">
+</section>
+</body></html>

@@ -1,0 +1,9 @@
+{
+  "_note": "One entry per zine, oldest first. The weekly run reads this to skip emails that already have a zine and to rotate style + lead character.",
+  "zines": [
+    {"email_date": "2026-11-13", "title": "I'm in love with silicone!", "slug": "silicone", "style": "character-comic", "lead": "princette", "status": "scheduled"},
+    {"email_date": "2026-11-20", "title": "The earthquake in your pants", "slug": "rumblies", "style": "comic-book", "lead": "shimmer", "status": "scheduled"},
+    {"email_date": "2026-11-27", "title": "Capitalism Sucks, Here's 20% Off!", "slug": "capitalism-sucks-sale", "style": "riso-poster", "lead": "morrie", "status": "scheduled"},
+    {"email_date": "2026-12-04", "title": "Ever seen a white elephant blush?", "slug": "white-elephant", "style": "character-comic", "lead": "jix", "status": "draft"}
+  ]
+}

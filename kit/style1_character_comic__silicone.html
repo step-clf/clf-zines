@@ -1,0 +1,106 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="common.css">
+<script src="node_modules/roughjs/bundled/rough.js"></script>
+<script src="helpers.js"></script>
+<style>
+:root{--ink:#2e0f40;--purple:#8628ae;--pink:#e44cfc;--mint:#92f0f0;--yellow:#f6e47a;--lav:#d9c3ff;--blue:#bfe6ff}
+.slide{background:url(img/paper_cream.jpg);color:var(--ink)}
+.slide::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(rgba(90,140,200,.16) 2px,transparent 2px),linear-gradient(90deg,rgba(90,140,200,.16) 2px,transparent 2px);
+  background-size:54px 54px;background-position:-2px -2px}
+.hand{font-family:"Gaegu";font-weight:700}
+.title{font-family:"Shrikhand";color:var(--purple);line-height:.95;text-shadow:4px 4px 0 var(--pink)}
+.bubble{position:absolute;padding:26px 40px;font-family:"Gaegu";font-weight:700;font-size:50px;line-height:1.1;text-align:center}
+.panel{position:absolute;padding:30px 36px;font-family:"Gaegu";font-weight:700;font-size:44px;line-height:1.12}
+.panel b{font-weight:700}
+.char{position:absolute;filter:drop-shadow(5px 6px 0 rgba(42,22,51,.18))}
+.doodle{position:absolute;pointer-events:none}
+.foot{position:absolute;bottom:40px;font-family:"Gaegu";font-weight:700;font-size:34px;color:var(--purple)}
+.num{font-family:"Shrikhand";color:var(--pink);font-size:60px;line-height:1;margin-right:12px;float:left}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+ <symbol id="star" viewBox="0 0 100 100"><path d="M50 6 L61 38 L95 39 L68 59 L78 92 L50 72 L22 92 L32 59 L5 39 L39 38 Z" fill="currentColor" stroke="#2a1633" stroke-width="5" stroke-linejoin="round"/></symbol>
+ <symbol id="heart" viewBox="0 0 100 100"><path d="M50 88 C10 60 4 34 22 20 C36 10 48 20 50 32 C52 20 64 10 78 20 C96 34 90 60 50 88 Z" fill="currentColor" stroke="#2a1633" stroke-width="5" stroke-linejoin="round"/></symbol>
+ <symbol id="spark" viewBox="0 0 100 100"><path d="M50 4 Q54 46 96 50 Q54 54 50 96 Q46 54 4 50 Q46 46 50 4Z" fill="currentColor" stroke="#2a1633" stroke-width="4"/></symbol>
+ <symbol id="swirl" viewBox="0 0 100 100"><path d="M50 50 m0 0 a6 6 0 1 1 10 4 a14 14 0 1 1 -24 -10 a22 22 0 1 1 36 22" fill="none" stroke="#2a1633" stroke-width="5" stroke-linecap="round"/></symbol>
+</defs></svg>
+
+<!-- B1 COVER: Princette hosts -->
+<section class="slide">
+  <div class="abs hand" style="top:50px;left:60px;font-size:34px;color:var(--purple)">toy facts w/ the cute little fuckers &#9733; vol. 1</div>
+  <div class="abs title" style="top:130px;left:60px;width:960px;font-size:132px;transform:rotate(-3deg)">I'm in love with silicone!</div>
+  <div class="abs hand" style="top:560px;left:90px;font-size:50px;transform:rotate(-2deg)">it's the bestest <span style="color:var(--pink)">(and so are you!!!)</span></div>
+  <img class="char" src="img/princette_purp.png" style="width:560px;left:40px;top:680px;transform:rotate(-4deg)">
+  <div class="bubble" data-rough="ellipse" data-fill="#fff" data-tail="60,140,-110,120" style="right:70px;top:700px;width:420px;height:250px;display:flex;align-items:center;justify-content:center">psst... wanna know why our toys feel SO good?</div>
+  <svg class="doodle" style="width:90px;height:90px;right:120px;top:1030px;color:var(--yellow);transform:rotate(12deg)"><use href="#star"/></svg>
+  <svg class="doodle" style="width:60px;height:60px;right:330px;top:1110px;color:var(--pink)"><use href="#heart"/></svg>
+  <svg class="doodle" style="width:70px;height:70px;left:600px;top:640px;color:var(--mint)"><use href="#spark"/></svg>
+  <div class="foot" style="right:60px">swipe &rarr; &rarr;</div>
+</section>
+
+<!-- B2: Starsi hosts the bad stuff -->
+<section class="slide">
+  <img class="char" src="img/starsi_hmm.png" style="width:420px;right:30px;top:60px;transform:rotate(8deg)">
+  <div class="bubble" data-rough="ellipse" data-fill="#fff" data-tail="460,140,640,150" style="left:60px;top:80px;width:520px;height:250px;display:flex;align-items:center;justify-content:center">hmm... what's your toy actually made of?</div>
+  <div class="abs title" style="top:460px;left:60px;font-size:84px;transform:rotate(-2deg)">the sus stuff:</div>
+  <div class="panel hand" data-rough="rect" data-fill="#ffd9e8" style="left:70px;top:590px;width:940px;height:210px;font-size:52px;display:flex;flex-wrap:wrap;gap:6px 40px;align-items:center;justify-content:center">
+    <span>&#10007; cheap plastic</span><span>&#10007; jelly rubber</span><span>&#10007; vinyl</span><span>&#10007; PVC</span>
+  </div>
+  <div class="panel" data-rough="rect" data-fill="#fff" style="left:70px;top:860px;width:940px;height:270px">
+    Sex toys aren't FDA regulated, so lots of them are made from stuff that's <b>tough to clean</b> or contains <b>phthalates &amp; other chemicals</b> that can be harmful to your body.
+  </div>
+  <div class="abs hand" style="left:90px;top:1185px;font-size:48px;color:var(--pink);transform:rotate(-2deg)">why do companies use it? &larr; it's cheaper. ugh.</div>
+  <div class="foot" style="right:60px">2/6</div>
+</section>
+
+<!-- B3: Zeep hosts 100% silicone -->
+<section class="slide">
+  <img class="char" src="img/zeep_green.png" style="width:330px;left:50px;top:60px;transform:rotate(-8deg)">
+  <div class="bubble" data-rough="ellipse" data-fill="#fff" data-tail="60,150,-60,150" style="left:400px;top:70px;width:600px;height:260px;display:flex;align-items:center;justify-content:center">not us! every CLF monster is 100% silicone.</div>
+  <div class="abs title" style="top:470px;left:60px;font-size:80px;transform:rotate(-2deg)">silicone is...</div>
+  <div class="panel" data-rough="rect" data-fill="#d6f7e6" style="left:70px;top:600px;width:450px;height:250px"><div style="font-family:Shrikhand;font-size:48px;color:var(--purple)">nonporous</div>nowhere for bacteria to hide</div>
+  <div class="panel" data-rough="rect" data-fill="#fff3bf" style="left:560px;top:600px;width:450px;height:250px"><div style="font-family:Shrikhand;font-size:48px;color:var(--purple)">hypo&shy;allergenic</div>gentle on sensitive bods</div>
+  <div class="panel" data-rough="rect" data-fill="#e6dcff" style="left:70px;top:900px;width:450px;height:250px"><div style="font-family:Shrikhand;font-size:48px;color:var(--purple)">durable</div>lasts a heckuva lot longer</div>
+  <div class="panel" data-rough="rect" data-fill="#ffd9e8" style="left:560px;top:900px;width:450px;height:250px"><div style="font-family:Shrikhand;font-size:48px;color:var(--purple)">for all bodies</div>safe for every single sexy bod</div>
+  <svg class="doodle" style="width:80px;height:80px;right:60px;top:420px;color:var(--yellow);transform:rotate(-10deg)"><use href="#star"/></svg>
+  <div class="foot" style="right:60px">3/6</div>
+</section>
+
+<!-- B4: Jix hosts the pet test -->
+<section class="slide">
+  <div class="abs title" style="top:70px;left:60px;font-size:116px;transform:rotate(-3deg)">the pet test</div>
+  <img class="char" src="img/jix_lav.png" style="width:560px;left:40px;top:270px;transform:rotate(-6deg)">
+  <div class="bubble" data-rough="ellipse" data-fill="#fff" data-tail="50,120,-140,100" style="right:70px;top:300px;width:380px;height:220px;display:flex;align-items:center;justify-content:center;font-size:58px">pet me!!</div>
+  <svg class="doodle" style="width:70px;height:70px;left:560px;top:600px;color:var(--pink);transform:rotate(-14deg)"><use href="#heart"/></svg>
+  <svg class="doodle" style="width:50px;height:50px;left:640px;top:690px;color:var(--pink);transform:rotate(10deg)"><use href="#heart"/></svg>
+  <svg class="doodle" style="width:90px;height:90px;left:440px;top:300px"><use href="#swirl"/></svg>
+  <div class="panel" data-rough="rect" data-fill="#fff" style="right:70px;top:580px;width:430px;height:430px">Our matte finish is silky smooth. Folks open their new toy and <b style="color:var(--purple)">immediately want to pet it.</b><br><span style="font-size:32px">(fair. it's an adorable new pet.)</span></div>
+  <div class="abs hand" style="left:70px;top:1090px;width:940px;font-size:62px;line-height:1.05;transform:rotate(-2deg)">now imagine how that feels on the <span style="color:var(--pink)">rest of your skin</span> ;)</div>
+  <div class="foot" style="right:60px">4/6</div>
+</section>
+
+<!-- B5: Shimmer hosts care -->
+<section class="slide">
+  <img class="char" src="img/shimmer.png" style="width:250px;right:60px;top:40px;transform:rotate(14deg)">
+  <div class="bubble" data-rough="ellipse" data-fill="#fff" data-tail="500,120,700,140" style="left:60px;top:60px;width:560px;height:220px;display:flex;align-items:center;justify-content:center">keep me fresh &amp; I'll last forever!</div>
+  <div class="abs title" style="top:340px;left:60px;font-size:80px;transform:rotate(-2deg)">treat it right</div>
+  <div class="panel" data-rough="rect" data-fill="#fff3bf" style="left:70px;top:470px;width:450px;height:330px"><span class="num">1</span><b>lube:</b> water-based, oil-based or hybrid. silicone lube can break silicone toys down!</div>
+  <div class="panel" data-rough="rect" data-fill="#d6f7e6" style="left:560px;top:470px;width:450px;height:330px"><span class="num">2</span><b>wash:</b> mild, fragrance-free soap + warm water. before AND after.</div>
+  <div class="panel" data-rough="rect" data-fill="#e6dcff" style="left:70px;top:850px;width:450px;height:330px"><span class="num">3</span><b>deep clean:</b> boil it! just take the vibe out first.</div>
+  <div class="panel" data-rough="rect" data-fill="#ffd9e8" style="left:560px;top:850px;width:450px;height:330px"><span class="num">4</span><b>store:</b> in a pouch or its box. not freeballing in the nightstand.</div>
+  <div class="abs hand" style="left:80px;bottom:40px;font-size:30px;opacity:.75">p.s. oil-based lube + condoms don't mix</div>
+  <div class="foot" style="right:60px">5/6</div>
+</section>
+
+<!-- B6: Morrie CTA -->
+<section class="slide">
+  <div class="abs title" style="top:80px;left:60px;width:960px;font-size:108px;transform:rotate(-3deg)">safe. soft. silky smooth.</div>
+  <div class="abs hand" style="top:470px;left:90px;font-size:72px;color:var(--pink);transform:rotate(-4deg)">and sexy as hell.</div>
+  <img class="char" src="img/morrie_hop.png" style="width:420px;left:60px;top:600px;transform:rotate(-6deg)">
+  <div class="bubble" data-rough="ellipse" data-fill="#fff" data-tail="60,150,-90,130" style="right:60px;top:610px;width:500px;height:280px;display:flex;align-items:center;justify-content:center">make one of us your perfect plaything!</div>
+  <div class="panel hand" data-rough="rect" data-fill="#8a2fc4" data-stroke="#2a1633" style="right:80px;top:960px;width:470px;height:120px;color:#fff;font-size:50px;text-align:center;font-weight:700;padding-top:28px">&rarr; link in bio &larr;</div>
+  <img class="abs" src="img/logo.png" style="width:260px;right:110px;top:1120px;transform:rotate(-3deg)">
+  <svg class="doodle" style="width:80px;height:80px;left:520px;top:1150px;color:var(--yellow);transform:rotate(10deg)"><use href="#star"/></svg>
+  <svg class="doodle" style="width:60px;height:60px;left:460px;top:640px;color:var(--mint)"><use href="#spark"/></svg>
+</section>
+</body></html>

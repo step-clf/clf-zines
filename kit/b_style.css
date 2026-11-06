@@ -1,0 +1,22 @@
+/* CLF character-comic zine style (brand palette) */
+:root{--ink:#2e0f40;--purple:#8628ae;--mag:#e44cfc;--aqua:#92f0f0;--butter:#f6e47a;
+  --f-mag:#fbdcff;--f-aqua:#d4fafa;--f-butter:#fbf3c0;--f-lilac:#efe3ff}
+.slide{background:url(img/paper_cream.jpg);color:var(--ink)}
+.slide::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(rgba(134,40,174,.10) 2px,transparent 2px),linear-gradient(90deg,rgba(134,40,174,.10) 2px,transparent 2px);
+  background-size:54px 54px;background-position:-2px -2px}
+.hand{font-family:"Gaegu";font-weight:700}
+.title{font-family:"Shrikhand";color:var(--purple);line-height:.95;text-shadow:5px 5px 0 var(--mag)}
+.bubble{position:absolute;padding:26px 40px;font-family:"Gaegu";font-weight:700;font-size:50px;line-height:1.08;text-align:center;display:flex;align-items:center;justify-content:center;z-index:4}
+.panel{position:absolute;padding:30px 36px;font-family:"Gaegu";font-weight:700;font-size:44px;line-height:1.12}
+.panel b{color:var(--purple)}
+.char{position:absolute;filter:drop-shadow(5px 6px 0 rgba(46,15,64,.18))}
+.doodle{position:absolute;pointer-events:none}
+.foot{position:absolute;bottom:40px;right:60px;font-family:"Gaegu";font-weight:700;font-size:34px;color:var(--purple)}
+.top{position:absolute;top:50px;left:60px;font-family:"Gaegu";font-weight:700;font-size:34px;color:var(--purple)}
+.num{font-family:"Shrikhand";color:var(--mag);font-size:60px;line-height:1;margin-right:12px;float:left}
+.arrow{position:absolute;left:0;top:0;width:1080px;height:1350px;pointer-events:none;overflow:visible;z-index:6}
+.sign{position:absolute;z-index:5}
+.sign .board{position:relative;padding:22px 26px;font-family:"Permanent Marker";font-size:40px;line-height:1.05;text-align:center;color:var(--ink)}
+.sign .stick{position:absolute;left:50%;width:18px;margin-left:-9px;background:#c99a62;border:4px solid var(--ink);border-radius:4px;z-index:-1}
+.shake{position:absolute;pointer-events:none}

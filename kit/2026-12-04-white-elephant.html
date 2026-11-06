@@ -1,0 +1,95 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="b_style.css">
+<script src="node_modules/roughjs/bundled/rough.js"></script>
+<script src="helpers.js"></script>
+<style>
+.blush{position:absolute;width:70px;height:34px;border-radius:50%;background:rgba(255,72,176,.45);filter:blur(4px)}
+.snow{position:absolute;pointer-events:none;color:var(--aqua)}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+ <symbol id="star" viewBox="0 0 100 100"><path d="M50 6 L61 38 L95 39 L68 59 L78 92 L50 72 L22 92 L32 59 L5 39 L39 38 Z" fill="currentColor" stroke="#2e0f40" stroke-width="5" stroke-linejoin="round"/></symbol>
+ <symbol id="heart" viewBox="0 0 100 100"><path d="M50 88 C10 60 4 34 22 20 C36 10 48 20 50 32 C52 20 64 10 78 20 C96 34 90 60 50 88 Z" fill="currentColor" stroke="#2e0f40" stroke-width="5" stroke-linejoin="round"/></symbol>
+ <symbol id="spark" viewBox="0 0 100 100"><path d="M50 4 Q54 46 96 50 Q54 54 50 96 Q46 54 4 50 Q46 46 50 4Z" fill="currentColor" stroke="#2e0f40" stroke-width="4"/></symbol>
+ <symbol id="flake" viewBox="0 0 100 100"><g stroke="#2e0f40" stroke-width="6" stroke-linecap="round" fill="none"><path d="M50 8V92M14 29L86 71M14 71L86 29"/><path d="M50 22L40 12M50 22L60 12M50 78L40 88M50 78L60 88"/></g><circle cx="50" cy="50" r="9" fill="currentColor" stroke="#2e0f40" stroke-width="5"/></symbol>
+ <symbol id="gift" viewBox="0 0 200 200"><rect x="22" y="80" width="156" height="110" rx="6" fill="#e44cfc" stroke="#2e0f40" stroke-width="7"/><rect x="12" y="56" width="176" height="36" rx="6" fill="#e44cfc" stroke="#2e0f40" stroke-width="7"/><rect x="88" y="56" width="24" height="134" fill="#f6e47a" stroke="#2e0f40" stroke-width="7"/><path d="M100 56 C70 10 40 30 62 52 Z M100 56 C130 10 160 30 138 52 Z" fill="#f6e47a" stroke="#2e0f40" stroke-width="7" stroke-linejoin="round"/></symbol>
+ <symbol id="sock" viewBox="0 0 160 220"><path d="M40 10 H120 V120 L140 150 C160 185 130 215 95 205 L30 185 C5 175 5 140 30 130 L40 125 Z" fill="#fbdcff" stroke="#2e0f40" stroke-width="7" stroke-linejoin="round"/><rect x="32" y="6" width="96" height="40" rx="10" fill="#fff" stroke="#2e0f40" stroke-width="7"/><path d="M50 70h60M50 95h60" stroke="#8628ae" stroke-width="8" stroke-linecap="round"/></symbol>
+</defs></svg>
+
+<!-- 1 COVER: Jix hosts -->
+<section class="slide">
+  <div class="top">holiday gift guide w/ the cute little fuckers &#9733;</div>
+  <div class="abs title" style="top:110px;left:60px;width:980px;font-size:112px;transform:rotate(-3deg)">Ever seen a white elephant blush?</div>
+  <div class="abs hand" style="top:500px;left:90px;font-size:54px;transform:rotate(-2deg)">get your holiday orders in <span style="color:var(--mag)">now!</span></div>
+  <img class="char" src="img/jix_lav.png" style="width:460px;left:50px;top:660px;transform:rotate(-6deg)">
+    <div class="bubble" data-rough="ellipse" data-fill="#fff" data-tail="60,150,-120,150" style="right:60px;top:690px;width:470px;height:260px">who, me?? i'd make a VERY good present...</div>
+  <svg class="doodle" style="width:190px;height:190px;right:120px;top:1010px;transform:rotate(8deg)"><use href="#gift"/></svg>
+  <svg class="snow" style="width:60px;height:60px;left:600px;top:560px"><use href="#flake"/></svg>
+  <svg class="snow" style="width:50px;height:50px;left:960px;top:620px"><use href="#flake"/></svg>
+  <svg class="doodle" style="width:70px;height:70px;left:520px;top:1170px;color:var(--butter);transform:rotate(12deg)"><use href="#star"/></svg>
+  <div class="foot">swipe &rarr; &rarr;</div>
+</section>
+
+<!-- 2 Starsi: it's December already!? -->
+<section class="slide">
+  <img class="char" src="img/starsi_no.png" style="width:340px;right:80px;top:70px;transform:rotate(6deg)">
+  <div class="bubble" data-rough="ellipse" data-fill="#fff" data-tail="470,140,660,150" style="left:60px;top:80px;width:540px;height:250px">holy crap. it's december ALREADY!?</div>
+  <div class="panel" data-rough="rect" data-fill="#efe3ff" style="left:70px;top:440px;width:940px;height:300px">it feels like just yesterday we were putting <b>ghosties in our windows</b> and dusting off our best <b>Over the Garden Wall</b> cosplay.</div>
+  <div class="abs title" style="top:820px;left:60px;font-size:80px;transform:rotate(-2deg)">now, all of a sudden...</div>
+  <div class="panel" data-rough="rect" data-fill="#fbf3c0" style="left:70px;top:960px;width:720px;height:220px">it's time to bake holiday cookies &amp; look for <b>stocking stuffers.</b></div>
+  <svg class="doodle" style="width:150px;height:200px;right:70px;top:960px;transform:rotate(10deg)"><use href="#sock"/></svg>
+  <div class="foot">2/6</div>
+</section>
+
+<!-- 3 Zeep: speaking of stuffing your stocking -->
+<section class="slide">
+  <img class="char" src="img/zeep_mint.png" style="width:300px;left:50px;top:60px;transform:rotate(-8deg)">
+  <div class="bubble" data-rough="ellipse" data-fill="#fff" data-tail="60,140,-70,150" style="left:380px;top:70px;width:630px;height:260px"><div>speaking of stuffing your stocking... <span style="color:var(--mag)">(see what i did there?)</span></div></div>
+  <div class="abs title" style="top:470px;left:60px;font-size:84px;transform:rotate(-2deg)">may i suggest...</div>
+  <div class="panel" data-rough="rect" data-fill="#fbdcff" style="left:70px;top:600px;width:300px;height:330px;text-align:center"><img src="img/princette_plat.png" style="width:150px;margin:0 auto 10px"><div style="font-family:Shrikhand;font-size:46px;color:var(--purple)">fun.</div></div>
+  <div class="panel" data-rough="rect" data-fill="#d4fafa" style="left:390px;top:600px;width:300px;height:330px;text-align:center"><img src="img/shimmer.png" style="width:120px;margin:0 auto 10px"><div style="font-family:Shrikhand;font-size:46px;color:var(--purple)">feisty.</div></div>
+  <div class="panel" data-rough="rect" data-fill="#fbf3c0" style="left:710px;top:600px;width:300px;height:330px;text-align:center"><img src="img/starsi_rose.png" style="width:160px;margin:0 auto 10px"><div style="font-family:Shrikhand;font-size:46px;color:var(--purple)">adorable.</div></div>
+  <div class="abs hand" style="left:80px;top:990px;width:930px;font-size:66px;line-height:1.05;transform:rotate(-2deg)">and i promise they'll fit in <span style="color:var(--mag)">all <i>sorts</i></span> of stockings ;)</div>
+  <svg class="doodle" style="width:80px;height:80px;right:80px;top:1170px;color:var(--butter);transform:rotate(-10deg)"><use href="#star"/></svg>
+  <svg class="snow" style="width:60px;height:60px;left:110px;top:1180px"><use href="#flake"/></svg>
+  <div class="foot">3/6</div>
+</section>
+
+<!-- 4 Princette: white elephant -->
+<section class="slide">
+  <div class="abs title" style="top:60px;left:60px;width:960px;font-size:84px;transform:rotate(-3deg);line-height:1">can you even imagine someone opening this at your white elephant exchange??</div>
+  <svg class="doodle" style="width:520px;height:520px;left:280px;top:680px"><use href="#gift"/></svg>
+  <img class="char" src="img/princette_purp.png" style="width:470px;left:300px;top:430px;transform:rotate(-4deg);z-index:2">
+  <div class="blush" style="left:440px;top:620px;z-index:3"></div>
+  <div class="blush" style="left:610px;top:620px;z-index:3"></div>
+  <div class="bubble" data-rough="ellipse" data-fill="#fff" data-tail="60,160,-70,230" style="left:660px;top:400px;width:360px;height:210px;font-size:56px">surprise!!!</div>
+  <div class="abs hand" style="left:70px;top:520px;font-size:120px;color:var(--mag);transform:rotate(-12deg)">!!!</div>
+  <svg class="doodle" style="width:70px;height:70px;left:90px;top:760px;color:var(--mag)"><use href="#heart"/></svg>
+  <svg class="doodle" style="width:60px;height:60px;left:900px;top:820px;color:var(--aqua)"><use href="#spark"/></svg>
+  <div class="foot">4/6</div>
+</section>
+
+<!-- 5 Starsi coral: you deserve a gift too + order soon -->
+<section class="slide">
+  <div class="panel" data-rough="rect" data-fill="#fbdcff" style="left:70px;top:70px;width:600px;height:330px"><div style="font-family:Shrikhand;font-size:46px;color:var(--purple)">already have a CLF?</div>then you know better than anyone how well these fiery little monsters deliver the <b>holly jolly.</b></div>
+  <div class="panel" data-rough="rect" data-fill="#d4fafa" style="left:70px;top:450px;width:600px;height:330px"><div style="font-family:Shrikhand;font-size:46px;color:var(--purple)">don't have one yet?</div>i'm pretty sure you deserve a gift, too... and this one <b>just keeps on giving.</b></div>
+  <img class="char" src="img/starsi_coral.png" style="width:360px;right:30px;top:180px;transform:rotate(10deg)">
+  <svg class="doodle" style="width:70px;height:70px;right:80px;top:80px;color:var(--butter)"><use href="#star"/></svg>
+  <div class="abs title" style="top:850px;left:60px;font-size:84px;transform:rotate(-2deg)">psst... order soon!</div>
+  <div class="panel" data-rough="rect" data-fill="#fbf3c0" style="left:70px;top:980px;width:940px;height:230px">whoever you're shopping for, place your order <b>soon enough</b> to make sure it arrives <b>before the big day.</b></div>
+  <div class="foot">5/6</div>
+</section>
+
+<!-- 6 CTA -->
+<section class="slide">
+  <div class="abs title" style="top:80px;left:60px;width:960px;font-size:104px;transform:rotate(-3deg)">grab a toy for you &amp; your fave partner!</div>
+  <img class="char" src="img/morrie_hop.png" style="width:300px;left:40px;top:560px;transform:rotate(-8deg)">
+  <img class="char" src="img/jix_peri.png" style="width:300px;left:300px;top:620px;transform:rotate(6deg)">
+  <img class="char" src="img/zeep_green.png" style="width:210px;left:580px;top:660px;transform:rotate(12deg)">
+  <div class="bubble" data-rough="ellipse" data-fill="#fff" data-tail="70,170,-60,250" style="right:40px;top:400px;width:360px;height:220px">'tis the season!</div>
+  <div class="panel hand" data-rough="rect" data-fill="#8628ae" data-stroke="#2e0f40" style="right:80px;top:1000px;width:470px;height:120px;color:#fff;font-size:50px;text-align:center;padding-top:28px">&rarr; link in bio &larr;</div>
+  <img class="abs" src="img/logo.png" style="width:240px;left:90px;top:1060px;transform:rotate(-3deg)">
+  <svg class="snow" style="width:70px;height:70px;left:820px;top:820px"><use href="#flake"/></svg>
+  <svg class="doodle" style="width:80px;height:80px;left:420px;top:1150px;color:var(--butter);transform:rotate(10deg)"><use href="#star"/></svg>
+</section>
+</body></html>
