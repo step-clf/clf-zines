@@ -2,19 +2,11 @@
   "_note": "One entry per zine, oldest first. The weekly run reads this to skip emails that already have a zine and to rotate style + lead character.",
   "zines": [
     {
-      "email_date": "2026-11-13",
+      "email_date": "2026-11-20",
       "title": "I'm in love with silicone!",
       "slug": "silicone",
       "style": "character-comic",
       "lead": "princette",
-      "status": "scheduled"
-    },
-    {
-      "email_date": "2026-11-20",
-      "title": "The earthquake in your pants",
-      "slug": "rumblies",
-      "style": "comic-book",
-      "lead": "shimmer",
       "status": "scheduled"
     },
     {
@@ -38,6 +30,14 @@
         "tumblr": "cmw5id1aq0cbfpx07g0fr0xu1",
         "bluesky": "cmw5id1be0cbgpx070qlc672y"
       }
+    },
+    {
+      "email_date": "2027-01-15",
+      "title": "The earthquake in your pants",
+      "slug": "rumblies",
+      "style": "comic-book",
+      "lead": "shimmer",
+      "status": "scheduled"
     }
   ]
 }
