@@ -1,0 +1,121 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="common.css">
+<script src="node_modules/roughjs/bundled/rough.js"></script>
+<script src="helpers.js"></script>
+<style>
+:root{--ink:#2e0f40;--purple:#8628ae;--mag:#e44cfc;--aqua:#92f0f0;--butter:#f6e47a;--cream:#fff8ec}
+.slide{background:var(--purple);color:var(--ink)}
+.slide::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,.13) 3px,transparent 3.5px);background-size:22px 22px}
+.panel{position:absolute;padding:0}
+.cap{position:absolute;padding:14px 22px;font-family:"Patrick Hand";font-size:38px;line-height:1.1;text-transform:uppercase;z-index:8}
+.title{font-family:"Shrikhand";color:var(--butter);line-height:.95;-webkit-text-stroke:12px var(--ink);paint-order:stroke fill;text-shadow:8px 8px 0 var(--mag)}
+.sfx{position:absolute;font-family:"Shrikhand";color:var(--mag);-webkit-text-stroke:10px var(--ink);paint-order:stroke fill;text-shadow:5px 5px 0 var(--ink);z-index:9;line-height:.95}
+.bubble{position:absolute;padding:22px 32px;font-family:"Patrick Hand";font-size:44px;line-height:1.05;text-align:center;text-transform:uppercase;display:flex;align-items:center;justify-content:center;z-index:8}
+.char{position:absolute;z-index:7;filter:drop-shadow(6px 7px 0 rgba(46,15,64,.35))}
+.txt{position:absolute;font-family:"Patrick Hand";font-size:44px;line-height:1.15;z-index:8}
+.foot{position:absolute;bottom:26px;right:50px;font-family:"Patrick Hand";font-size:32px;color:#fff;z-index:9}
+.burst{clip-path:polygon(50% 0,58% 18%,75% 5%,73% 25%,93% 20%,82% 37%,100% 45%,82% 55%,95% 72%,74% 70%,76% 92%,59% 80%,50% 100%,41% 80%,24% 92%,26% 70%,5% 72%,18% 55%,0 45%,18% 37%,7% 20%,27% 25%,25% 5%,42% 18%)}
+.dots{background-image:radial-gradient(rgba(228,76,252,.28) 30%,transparent 33%);background-size:20px 20px}
+.dotsa{background-image:radial-gradient(rgba(60,190,200,.30) 30%,transparent 33%);background-size:20px 20px}
+.shake{position:absolute;pointer-events:none;z-index:8}
+.foot{bottom:4px !important;font-size:30px !important}
+.glyph{font-family:"DejaVu Sans";font-weight:bold}
+.sign{position:absolute;font-family:"Shrikhand";color:var(--butter);-webkit-text-stroke:10px var(--ink);paint-order:stroke fill;text-shadow:6px 6px 0 var(--mag);z-index:9;line-height:1}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+ <symbol id="star" viewBox="0 0 100 100"><path d="M50 6 L61 38 L95 39 L68 59 L78 92 L50 72 L22 92 L32 59 L5 39 L39 38 Z" fill="currentColor" stroke="#2e0f40" stroke-width="6" stroke-linejoin="round"/></symbol>
+ <symbol id="moon" viewBox="0 0 100 100"><path d="M62 8 A44 44 0 1 0 92 70 A36 36 0 1 1 62 8 Z" fill="currentColor" stroke="#2e0f40" stroke-width="6" stroke-linejoin="round"/></symbol>
+ <symbol id="spark" viewBox="0 0 100 100"><path d="M50 4 Q56 44 96 50 Q56 56 50 96 Q44 56 4 50 Q44 44 50 4 Z" fill="currentColor" stroke="#2e0f40" stroke-width="5" stroke-linejoin="round"/></symbol>
+</defs></svg>
+
+<!-- 1 COVER: Starsi -->
+<section class="slide">
+  <div class="panel" data-rough="rect" data-fill="#2e0f40" data-stroke="#2e0f40" data-sw="6" style="left:40px;top:36px;width:1000px;height:110px"></div>
+  <div class="abs" style="left:70px;top:44px;font-family:Shrikhand;font-size:70px;color:#fff;z-index:3">cute little comics</div>
+  <div class="abs" style="right:70px;top:58px;font-family:'Patrick Hand';font-size:34px;color:var(--butter);line-height:1;text-align:right;z-index:3">SPECIAL ISSUE<br>STAR SIGNS</div>
+  <div class="panel" data-rough="rect" data-fill="#fff8ec" data-sw="7" style="left:40px;top:180px;width:1000px;height:1130px"></div>
+  <div class="abs dots" style="left:52px;top:192px;width:976px;height:1106px"></div>
+  <div class="abs burst" style="left:200px;top:600px;width:680px;height:680px;background:var(--butter)"></div>
+  <div class="abs title" style="left:80px;top:215px;width:940px;font-size:118px;z-index:6;transform:rotate(-3deg)">each toy's sun sign, part 1!</div>
+  <img class="char" src="img/starsi_rose.png" style="width:420px;left:330px;top:700px;transform:rotate(-10deg)">
+  <svg class="abs" style="width:110px;height:110px;left:110px;top:720px;color:var(--butter);z-index:8"><use href="#moon"/></svg>
+  <svg class="abs" style="width:90px;height:90px;left:850px;top:660px;color:var(--aqua);z-index:8"><use href="#spark"/></svg>
+  <svg class="abs" style="width:70px;height:70px;left:210px;top:930px;color:var(--mag);z-index:8"><use href="#star"/></svg>
+  <div class="cap" data-rough="rect" data-fill="#92f0f0" data-sw="5" style="left:70px;top:1150px;width:430px;transform:rotate(-2deg)">astrologically awesome!!!</div>
+  <div class="sfx" style="right:80px;top:1180px;font-size:64px;transform:rotate(6deg);color:var(--butter)">swipe &rarr;</div>
+</section>
+
+<!-- 2 Birthday: Shimmer -->
+<section class="slide">
+  <div class="cap" data-rough="rect" data-fill="#f6e47a" data-sw="5" style="left:60px;top:50px;width:820px">happy december! slipper socks, twinkle lights, gift giving and...</div>
+  <div class="panel" data-rough="rect" data-fill="#fbdcff" data-sw="7" style="left:40px;top:220px;width:1000px;height:1090px"></div>
+  <div class="abs dots" style="left:52px;top:232px;width:976px;height:1066px"></div>
+  <div class="abs title" style="left:80px;top:250px;width:920px;font-size:96px;z-index:6;transform:rotate(-2deg);text-align:center">step's birthday!!!</div>
+  <div class="txt" style="left:80px;top:400px;width:920px;font-size:52px;text-align:center">which makes Step a <b>Sagittarius</b> <span class="glyph" style="color:var(--purple)">&#9808;</span></div>
+  <div class="abs burst" style="left:40px;top:520px;width:560px;height:560px;background:var(--aqua);z-index:1"></div>
+  <img class="char" src="img/shimmer.png" style="width:300px;left:170px;top:640px;transform:rotate(-8deg)">
+  <div class="txt" data-rough="rect" data-fill="#fff" data-sw="5" style="left:580px;top:560px;width:440px;padding:24px 26px;font-size:44px;line-height:1.25"><div>&#9733; optimism<br>&#9733; adventure<br>&#9733; boundless curiosity<br>&#9733; radical honesty</div></div>
+  <div class="bubble" data-rough="ellipse" data-fill="#fff" data-sw="5" data-tail="140,40,40,-90" style="left:250px;top:1090px;width:700px;height:180px;font-size:48px"><div>where are my fellow sagittariuses at?</div></div>
+  <div class="foot">2/6</div>
+</section>
+
+<!-- 3 Every single CLF: Jix -->
+<section class="slide">
+  <div class="panel" data-rough="rect" data-fill="#fff8ec" data-sw="7" style="left:40px;top:40px;width:1000px;height:700px"></div>
+  <div class="abs dotsa" style="left:52px;top:52px;width:976px;height:676px"></div>
+  <div class="cap" data-rough="rect" data-fill="#f6e47a" data-sw="5" style="left:60px;top:60px;width:700px">whether or not you believe in astrology...</div>
+  <div class="abs title" style="left:80px;top:200px;width:560px;font-size:84px;z-index:6;transform:rotate(-2deg)">the sign of every single cute little fucker!</div>
+  <img class="char" src="img/jix_lav.png" style="width:330px;left:670px;top:280px;transform:rotate(10deg)">
+  <svg class="abs" style="width:80px;height:80px;left:900px;top:190px;color:var(--butter);z-index:8"><use href="#star"/></svg>
+  <div class="panel" data-rough="rect" data-fill="#92f0f0" data-sw="7" style="left:40px;top:770px;width:1000px;height:540px"></div>
+  <div class="txt" style="left:90px;top:810px;width:900px;font-size:58px;line-height:1.2"><div>&#10022; see which adorable monsters share your sign</div></div>
+  <div class="txt" style="left:90px;top:990px;width:900px;font-size:58px;line-height:1.2"><div>&#10022; and which ones you're most astrologically compatible with</div></div>
+  <div class="sfx" style="right:80px;top:1170px;font-size:60px;transform:rotate(-4deg);color:var(--butter)">hmmm...</div>
+  <div class="foot">3/6</div>
+</section>
+
+<!-- 4 Starsi: Cancer -->
+<section class="slide">
+  <div class="panel" data-rough="rect" data-fill="#fff8ec" data-sw="7" style="left:40px;top:40px;width:1000px;height:1270px"></div>
+  <div class="abs dots" style="left:52px;top:52px;width:976px;height:1246px"></div>
+  <div class="cap" data-rough="rect" data-fill="#f6e47a" data-sw="5" style="left:60px;top:60px">here's the original gang...</div>
+  <div class="sign" style="left:80px;top:170px;font-size:110px;transform:rotate(-3deg)">starsi</div>
+  <div class="sign" style="left:500px;top:190px;font-size:90px;transform:rotate(-3deg);color:var(--aqua)">cancer <span class="glyph" style="-webkit-text-stroke:4px var(--ink)">&#9803;</span></div>
+  <img class="char" src="img/starsi_coral.png" style="width:440px;left:80px;top:400px;transform:rotate(-8deg)">
+  <div class="txt" data-rough="rect" data-fill="#fbdcff" data-sw="5" style="left:560px;top:380px;width:440px;padding:22px 26px;font-size:42px;line-height:1.15"><div>both sea creatures, sure! but there's also a softness and a sweetness to Starsi.<br><br>Starsi carries a lot of space for people's feelings.</div></div>
+  <div class="bubble" data-rough="ellipse" data-fill="#fff" data-sw="5" data-tail="110,60,-80,-110" style="left:320px;top:980px;width:690px;height:290px;padding:30px 80px;font-size:44px;line-height:1.1"><div>as you're figuring things out, I'll hold you and make things better!</div></div>
+    <div class="foot">4/6</div>
+</section>
+
+<!-- 5 Princette: Scorpio -->
+<section class="slide">
+  <div class="panel" data-rough="rect" data-fill="#fff8ec" data-sw="7" style="left:40px;top:40px;width:1000px;height:1270px"></div>
+  <div class="abs dotsa" style="left:52px;top:52px;width:976px;height:1246px"></div>
+  <div class="sign" style="left:80px;top:80px;font-size:104px;transform:rotate(-3deg)">princette</div>
+  <div class="sign" style="right:90px;top:175px;font-size:84px;transform:rotate(-3deg);color:var(--mag)">scorpio <span class="glyph" style="-webkit-text-stroke:4px var(--ink)">&#9807;</span></div>
+  <div class="cap" data-rough="rect" data-fill="#f6e47a" data-sw="5" style="left:80px;top:310px;width:920px">another water sign (what did you expect for a half-octopus?)</div>
+  <div class="txt" style="left:90px;top:460px;width:900px;font-size:50px;line-height:1.2;text-align:center"><div>the epitome of passion: sassy, playful, always up for sexy times, magnetic &amp; mysterious</div></div>
+  <img class="char" src="img/princette_purp.png" style="width:340px;left:100px;top:680px;transform:rotate(-8deg)">
+  <img class="char" src="img/princette_plat.png" style="width:340px;left:640px;top:680px;transform:rotate(8deg)">
+  <div class="txt" data-rough="rect" data-fill="#efe3ff" data-sw="5" style="left:80px;top:1080px;width:440px;padding:16px 22px;font-size:40px;line-height:1.1;text-align:center"><div>deep purple: super-sensual</div></div>
+  <div class="txt" data-rough="rect" data-fill="#d4fafa" data-sw="5" style="left:560px;top:1080px;width:440px;padding:16px 22px;font-size:40px;line-height:1.1;text-align:center"><div>platinum: adds to the drama</div></div>
+  <div class="foot">5/6</div>
+</section>
+
+<!-- 6 CTA -->
+<section class="slide">
+  <div class="panel" data-rough="rect" data-fill="#fff8ec" data-sw="7" style="left:40px;top:40px;width:1000px;height:1000px"></div>
+  <div class="abs dots" style="left:52px;top:52px;width:976px;height:976px"></div>
+  <div class="abs title" style="left:80px;top:80px;width:920px;font-size:108px;z-index:6;transform:rotate(-3deg)">are you twinning with any of these CLFs?</div>
+  <img class="char" src="img/starsi_rose.png" style="width:300px;left:90px;top:600px;transform:rotate(-10deg)">
+  <img class="char" src="img/princette_purp.png" style="width:300px;left:380px;top:620px;transform:rotate(6deg)">
+  <div class="bubble" data-rough="ellipse" data-fill="#fff" data-sw="5" data-tail="80,190,-60,260" style="left:680px;top:560px;width:330px;height:260px;font-size:42px"><div>next week, peep the rest!</div></div>
+  <svg class="abs" style="width:90px;height:90px;left:860px;top:880px;color:var(--butter);z-index:9"><use href="#star"/></svg>
+  <svg class="abs" style="width:70px;height:70px;left:730px;top:920px;color:var(--aqua);z-index:9"><use href="#spark"/></svg>
+  <div class="panel" data-rough="rect" data-fill="#2e0f40" data-sw="7" style="left:40px;top:1070px;width:1000px;height:240px"></div>
+  <div class="abs" style="left:80px;top:1105px;font-family:Shrikhand;font-size:60px;color:var(--butter);z-index:5;line-height:1">to be continued...</div>
+  <div class="abs" style="left:80px;top:1190px;font-family:'Patrick Hand';font-size:48px;color:#fff;z-index:5">peep your perfect match &rarr; LINK IN BIO</div>
+  <img class="abs" src="img/logo.png" style="width:200px;right:70px;top:1100px;z-index:5;filter:brightness(0) invert(1)">
+</section>
+</body></html>
