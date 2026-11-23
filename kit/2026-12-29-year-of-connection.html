@@ -1,0 +1,138 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="common.css">
+<script src="node_modules/roughjs/bundled/rough.js"></script>
+<script src="helpers.js"></script>
+<style>
+:root{--ink:#2e0f40;--purple:#8628ae;--mag:#e44cfc;--aqua:#92f0f0;--butter:#f6e47a;--cream:#fff8ec}
+.slide{background:var(--purple);color:var(--ink)}
+.slide::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,.13) 3px,transparent 3.5px);background-size:22px 22px}
+.panel{position:absolute;padding:0}
+.cap{position:absolute;padding:14px 22px;font-family:"Patrick Hand";font-size:38px;line-height:1.1;text-transform:uppercase;z-index:8}
+.title{font-family:"Shrikhand";color:var(--butter);line-height:.95;-webkit-text-stroke:12px var(--ink);paint-order:stroke fill;text-shadow:8px 8px 0 var(--mag)}
+.sfx{position:absolute;font-family:"Shrikhand";color:var(--mag);-webkit-text-stroke:10px var(--ink);paint-order:stroke fill;text-shadow:5px 5px 0 var(--ink);z-index:9;line-height:.95}
+.bubble{position:absolute;padding:22px 32px;font-family:"Patrick Hand";font-size:44px;line-height:1.05;text-align:center;text-transform:uppercase;display:flex;align-items:center;justify-content:center;z-index:8}
+.char{position:absolute;z-index:7;filter:drop-shadow(6px 7px 0 rgba(46,15,64,.35))}
+.txt{position:absolute;font-family:"Patrick Hand";font-size:44px;line-height:1.15;z-index:8}
+.foot{position:absolute;bottom:4px;right:50px;font-family:"Patrick Hand";font-size:30px;color:#fff;z-index:9}
+.burst{clip-path:polygon(50% 0,58% 18%,75% 5%,73% 25%,93% 20%,82% 37%,100% 45%,82% 55%,95% 72%,74% 70%,76% 92%,59% 80%,50% 100%,41% 80%,24% 92%,26% 70%,5% 72%,18% 55%,0 45%,18% 37%,7% 20%,27% 25%,25% 5%,42% 18%)}
+.dots{background-image:radial-gradient(rgba(228,76,252,.28) 30%,transparent 33%);background-size:20px 20px}
+.dotsa{background-image:radial-gradient(rgba(60,190,200,.30) 30%,transparent 33%);background-size:20px 20px}
+.tag{position:absolute;font-family:"Patrick Hand";font-size:46px;text-transform:uppercase;text-align:center;padding:8px 0;z-index:8}
+.ico{position:absolute;z-index:9}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+ <symbol id="star" viewBox="0 0 100 100"><path d="M50 6 L61 38 L95 39 L68 59 L78 92 L50 72 L22 92 L32 59 L5 39 L39 38 Z" fill="currentColor" stroke="#2e0f40" stroke-width="6" stroke-linejoin="round"/></symbol>
+ <symbol id="spark" viewBox="0 0 100 100"><path d="M50 4 Q56 44 96 50 Q56 56 50 96 Q44 56 4 50 Q44 44 50 4 Z" fill="currentColor" stroke="#2e0f40" stroke-width="5" stroke-linejoin="round"/></symbol>
+ <symbol id="heart" viewBox="0 0 100 100"><path d="M50 88 C20 66 6 48 10 30 C14 12 38 8 50 28 C62 8 86 12 90 30 C94 48 80 66 50 88 Z" fill="currentColor" stroke="#2e0f40" stroke-width="6" stroke-linejoin="round"/></symbol>
+</defs></svg>
+
+<!-- 1 COVER: Princette -->
+<section class="slide">
+  <div class="panel" data-rough="rect" data-fill="#2e0f40" data-stroke="#2e0f40" data-sw="6" style="left:40px;top:36px;width:1000px;height:110px"></div>
+  <div class="abs" style="left:70px;top:44px;font-family:Shrikhand;font-size:70px;color:#fff;z-index:3">cute little comics</div>
+  <div class="abs" style="right:70px;top:58px;font-family:'Patrick Hand';font-size:34px;color:var(--butter);line-height:1;text-align:right;z-index:3">YEAR-END ISSUE<br>2026</div>
+  <div class="panel" data-rough="rect" data-fill="#fff8ec" data-sw="7" style="left:40px;top:180px;width:1000px;height:1130px"></div>
+  <div class="abs dots" style="left:52px;top:192px;width:976px;height:1106px"></div>
+  <div class="abs title" style="left:80px;top:215px;width:940px;font-size:112px;z-index:6;transform:rotate(-3deg)">thank you for a year of connection!</div>
+  <div class="abs burst" style="left:150px;top:600px;width:620px;height:620px;background:var(--butter)"></div>
+  <img class="char" src="img/princette_purp.png" style="width:400px;left:260px;top:670px;transform:rotate(-8deg)">
+  <div class="bubble" data-rough="ellipse" data-fill="#fff" data-sw="5" data-tail="70,190,-70,280" style="left:690px;top:600px;width:320px;height:230px;font-size:52px"><div>that's a wrap!</div></div>
+  <svg class="ico" style="width:90px;height:90px;left:90px;top:640px;color:var(--aqua)"><use href="#star"/></svg>
+  <svg class="ico" style="width:70px;height:70px;left:820px;top:900px;color:var(--mag)"><use href="#heart"/></svg>
+  <svg class="ico" style="width:60px;height:60px;left:110px;top:960px;color:var(--mag)"><use href="#spark"/></svg>
+  <svg class="ico" style="width:70px;height:70px;left:900px;top:1010px;color:var(--butter)"><use href="#star"/></svg>
+  <div class="cap" data-rough="rect" data-fill="#92f0f0" data-sw="5" style="left:70px;top:1180px;width:520px;transform:rotate(-1deg)">a heartfelt note from step</div>
+  <div class="sfx" style="right:70px;top:1180px;font-size:64px;transform:rotate(6deg);color:var(--butter)">swipe &rarr;</div>
+</section>
+
+<!-- 2 SETUP: Princette platinum -->
+<section class="slide">
+  <div class="cap" data-rough="rect" data-fill="#f6e47a" data-sw="5" style="left:60px;top:50px;width:760px">here we are, just a few days out from 2027 (!)</div>
+  <div class="panel" data-rough="rect" data-fill="#fff8ec" data-sw="7" style="left:40px;top:200px;width:1000px;height:560px"></div>
+  <div class="abs dotsa" style="left:52px;top:212px;width:976px;height:536px"></div>
+  <div class="txt" style="left:90px;top:250px;width:580px;font-size:58px;line-height:1.18"><div>&amp; I can't help but look back at the vast expanse of 2026 and be reminded of how lucky I am to be doing what I'm doing...</div></div>
+  <img class="char" src="img/princette_plat.png" style="width:330px;left:680px;top:300px;transform:rotate(6deg)">
+  <svg class="ico" style="width:70px;height:70px;left:930px;top:240px;color:var(--butter)"><use href="#spark"/></svg>
+  <div class="panel" data-rough="rect" data-fill="#e44cfc" data-sw="7" style="left:40px;top:790px;width:1000px;height:520px"></div>
+  <div class="abs title" style="left:80px;top:850px;width:920px;font-size:96px;z-index:6;text-align:center;line-height:1.02;text-shadow:6px 6px 0 var(--purple);transform:rotate(-2deg)">...and to be doing it in community with YOU.</div>
+  <svg class="ico" style="width:80px;height:80px;left:90px;top:1180px;color:var(--butter)"><use href="#heart"/></svg>
+  <svg class="ico" style="width:60px;height:60px;left:900px;top:1200px;color:var(--aqua)"><use href="#heart"/></svg>
+  <div class="foot">2/6</div>
+</section>
+
+<!-- 3 CORE: Zeep -->
+<section class="slide">
+  <div class="cap" data-rough="rect" data-fill="#f6e47a" data-sw="5" style="left:60px;top:50px;width:720px">in return, you have helped co-create...</div>
+  <div class="panel" data-rough="rect" data-fill="#fff8ec" data-sw="7" style="left:40px;top:150px;width:1000px;height:790px"></div>
+  <div class="abs dots" style="left:52px;top:162px;width:976px;height:766px"></div>
+  <div class="abs title" style="left:80px;top:190px;width:920px;font-size:80px;z-index:6;transform:rotate(-2deg)">a joyous &amp; safe space</div>
+  <div class="txt" style="left:90px;top:320px;width:580px;font-size:46px"><div>where all people &mdash; no matter their...</div></div>
+  <div class="tag" data-rough="rect" data-fill="#fbdcff" data-sw="5" style="left:90px;top:450px;width:260px;transform:rotate(-2deg)">body</div>
+  <div class="tag" data-rough="rect" data-fill="#d4fafa" data-sw="5" style="left:380px;top:450px;width:260px;transform:rotate(2deg)">gender</div>
+  <div class="tag" data-rough="rect" data-fill="#fbf3c0" data-sw="5" style="left:90px;top:555px;width:260px;transform:rotate(1deg)">sexuality</div>
+  <div class="tag" data-rough="rect" data-fill="#efe3ff" data-sw="5" style="left:380px;top:555px;width:260px;transform:rotate(-2deg)">ability</div>
+  <div class="txt" style="left:90px;top:680px;width:580px;font-size:52px"><div>&mdash; can explore and play and discover what brings them pleasure.</div></div>
+  <img class="char" src="img/zeep_green.png" style="width:290px;left:700px;top:380px;transform:rotate(7deg)">
+  <svg class="ico" style="width:60px;height:60px;left:940px;top:330px;color:var(--mag)"><use href="#heart"/></svg>
+  <div class="panel" data-rough="rect" data-fill="#92f0f0" data-sw="7" style="left:40px;top:970px;width:1000px;height:340px"></div>
+  <div class="abs title" style="left:80px;top:1020px;width:920px;font-size:84px;z-index:6;text-align:center;line-height:1.05;transform:rotate(-2deg)">there's something truly radical about that.</div>
+  <div class="foot">3/6</div>
+</section>
+
+<!-- 4 FUN: one at a time (Jix, Shimmer, Morrie) -->
+<section class="slide">
+  <div class="cap" data-rough="rect" data-fill="#f6e47a" data-sw="5" style="left:60px;top:50px;width:920px">the things we accomplish here radiate outward into the wider world...</div>
+  <div class="abs title" style="left:70px;top:200px;width:940px;font-size:62px;z-index:6;white-space:nowrap;transform:rotate(-2deg)">one cute little fucker at a time</div>
+  <div class="panel" data-rough="rect" data-fill="#fff8ec" data-sw="6" style="left:40px;top:390px;width:313px;height:580px"></div>
+  <div class="panel" data-rough="rect" data-fill="#fbdcff" data-sw="6" style="left:383px;top:390px;width:313px;height:580px"></div>
+  <div class="panel" data-rough="rect" data-fill="#d4fafa" data-sw="6" style="left:727px;top:390px;width:313px;height:580px"></div>
+  <img class="char" src="img/jix_lav.png" style="width:250px;left:72px;top:420px;transform:rotate(-6deg)">
+  <img class="char" src="img/shimmer.png" style="width:220px;left:430px;top:410px;transform:rotate(6deg)">
+  <img class="char" src="img/morrie_hop.png" style="width:220px;left:773px;top:410px;transform:rotate(-5deg)">
+  <div class="cap" data-rough="rect" data-fill="#fff" data-sw="4" style="left:60px;top:760px;width:230px;font-size:36px;text-align:center">one personal story at a time</div>
+  <div class="cap" data-rough="rect" data-fill="#fff" data-sw="4" style="left:403px;top:760px;width:230px;font-size:36px;text-align:center">one piece of rad fan art at a time</div>
+  <div class="cap" data-rough="rect" data-fill="#fff" data-sw="4" style="left:747px;top:760px;width:230px;font-size:36px;text-align:center">one email forwarded to a friend</div>
+  <div class="panel" data-rough="rect" data-fill="#e44cfc" data-sw="7" style="left:40px;top:1000px;width:1000px;height:310px"></div>
+  <div class="abs title" style="left:80px;top:1030px;width:920px;font-size:54px;z-index:6;text-align:center;line-height:1.08;-webkit-text-stroke:9px var(--ink);text-shadow:4px 4px 0 var(--purple)">you've helped to normalize sexuality &amp; queerness, and to make pleasure more accessible to EVERYONE.</div>
+  <div class="foot">4/6</div>
+</section>
+
+<!-- 5 RELATABLE: Starsi -->
+<section class="slide">
+  <div class="panel" data-rough="rect" data-fill="#fff8ec" data-sw="7" style="left:40px;top:40px;width:1000px;height:540px"></div>
+  <div class="abs dotsa" style="left:52px;top:52px;width:976px;height:516px"></div>
+  <div class="cap" data-rough="rect" data-fill="#f6e47a" data-sw="5" style="left:60px;top:60px">2026 has been...</div>
+  <img class="char" src="img/starsi_no.png" style="width:440px;left:70px;top:220px;transform:rotate(-4deg)">
+  <div class="sfx" style="left:560px;top:270px;font-size:120px;transform:rotate(-6deg)">...a year.</div>
+  <div class="panel" data-rough="rect" data-fill="#fbdcff" data-sw="7" style="left:40px;top:610px;width:1000px;height:700px"></div>
+  <div class="abs dots" style="left:52px;top:622px;width:976px;height:676px"></div>
+  <div class="cap" data-rough="rect" data-fill="#92f0f0" data-sw="5" style="left:60px;top:630px">but you? this community here?</div>
+  <div class="abs title" style="left:80px;top:750px;width:920px;font-size:100px;z-index:6;transform:rotate(-2deg)">this has been my happy place.</div>
+  <img class="char" src="img/starsi_rose.png" style="width:360px;left:80px;top:980px;transform:rotate(-8deg)">
+  <svg class="ico" style="width:90px;height:90px;left:470px;top:1040px;color:var(--mag)"><use href="#heart"/></svg>
+  <svg class="ico" style="width:60px;height:60px;left:580px;top:1150px;color:var(--butter)"><use href="#star"/></svg>
+  <div class="cap" data-rough="rect" data-fill="#fff" data-sw="5" style="right:80px;top:1190px;transform:rotate(-2deg)">&ndash; step</div>
+  <div class="foot">5/6</div>
+</section>
+
+<!-- 6 CTA: Princette + the fam -->
+<section class="slide">
+  <div class="panel" data-rough="rect" data-fill="#fff8ec" data-sw="7" style="left:40px;top:40px;width:1000px;height:1000px"></div>
+  <div class="abs dots" style="left:52px;top:52px;width:976px;height:976px"></div>
+  <div class="abs title" style="left:80px;top:80px;width:920px;font-size:104px;z-index:6;transform:rotate(-3deg)">can't wait to see you in the new year!</div>
+  <img class="char" src="img/zeep_mint.png" style="width:190px;left:70px;top:700px;transform:rotate(-10deg)">
+  <img class="char" src="img/starsi_coral.png" style="width:250px;left:230px;top:780px;transform:rotate(8deg)">
+  <img class="char" src="img/princette_purp.png" style="width:270px;left:440px;top:660px;transform:rotate(-4deg);z-index:8">
+  <img class="char" src="img/jix_peri.png" style="width:220px;left:690px;top:760px;transform:rotate(8deg)">
+  <img class="char" src="img/shimmer.png" style="width:140px;left:880px;top:820px;transform:rotate(12deg)">
+  <img class="char" src="img/morrie_butt.png" style="width:190px;left:80px;top:450px;transform:rotate(-6deg)">
+  <div class="bubble" data-rough="ellipse" data-fill="#fff" data-sw="5" data-tail="120,200,40,300" style="left:470px;top:420px;width:360px;height:220px;font-size:50px"><div>thank you!!</div></div>
+  <svg class="ico" style="width:70px;height:70px;left:880px;top:470px;color:var(--mag)"><use href="#heart"/></svg>
+  <svg class="ico" style="width:60px;height:60px;left:300px;top:560px;color:var(--butter)"><use href="#star"/></svg>
+  <div class="panel" data-rough="rect" data-fill="#2e0f40" data-sw="7" style="left:40px;top:1070px;width:1000px;height:240px"></div>
+  <div class="abs" style="left:80px;top:1105px;font-family:Shrikhand;font-size:54px;color:var(--butter);z-index:5;line-height:1">to be continued... in 2027</div>
+  <div class="abs" style="left:80px;top:1190px;font-family:'Patrick Hand';font-size:50px;color:#fff;z-index:5">find your happy place &rarr; LINK IN BIO</div>
+  <img class="abs" src="img/logo.png" style="width:170px;right:60px;top:1115px;z-index:5;filter:brightness(0) invert(1)">
+</section>
+</body></html>
