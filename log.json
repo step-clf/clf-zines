@@ -15,7 +15,11 @@
       "slug": "capitalism-sucks-sale",
       "style": "riso-poster",
       "lead": "morrie",
-      "status": "scheduled"
+      "status": "scheduled",
+      "postiz_ids": {
+        "instagram": "cmwv458ut08pfp907dxsbyovz"
+      },
+      "ig_note": "Instagram post re-created 2026-11-24 after the IG channel was reconnected (old IG posts were deleted)."
     },
     {
       "email_date": "2026-12-04",
@@ -23,13 +27,14 @@
       "slug": "white-elephant",
       "style": "character-comic",
       "lead": "jix",
-      "status": "draft",
+      "status": "scheduled",
       "postiz_ids": {
-        "instagram": "cmw5id1980cbdpx0756gxol11",
+        "instagram": "cmwv458vf08pgp907eywjrv7h",
         "facebook": "cmw5id1a10cbepx07eru42176",
         "tumblr": "cmw5id1aq0cbfpx07g0fr0xu1",
         "bluesky": "cmw5id1be0cbgpx070qlc672y"
-      }
+      },
+      "ig_note": "Instagram post re-created 2026-11-24 after the IG channel was reconnected (old IG posts were deleted)."
     },
     {
       "email_date": "2026-12-11",
@@ -37,15 +42,16 @@
       "slug": "sun-signs-1",
       "style": "comic-book",
       "lead": "starsi",
-      "status": "draft",
+      "status": "scheduled",
       "postiz_ids": {
-        "instagram": "cmw9nw6fi06ryms082d1250d5",
+        "instagram": "cmwv458w508php907o5tvdwn1",
         "facebook": "cmw9nw6g206rzms08jaav1b9d",
         "tumblr": "cmw9nw6gn06s0ms0862nudt5c",
         "bluesky": "cmw9nw6h906s1ms08e0wlr2tn"
       },
       "pages": 5,
-      "note": "Revised per Steph: 5 pages, cut birthday page, merged intro into cover, Trinity left out of socials (email unchanged). Morrie (Leo) moved in from Part 2 so each part has 3 toys and signs are mixed. Part 2 zine should cover Zeep, Jix, Shimmer."
+      "note": "Revised per Steph: 5 pages, cut birthday page, merged intro into cover, Trinity left out of socials (email unchanged). Morrie (Leo) moved in from Part 2 so each part has 3 toys and signs are mixed. Part 2 zine should cover Zeep, Jix, Shimmer.",
+      "ig_note": "Instagram post re-created 2026-11-24 after the IG channel was reconnected (old IG posts were deleted)."
     },
     {
       "email_date": "2026-12-18",
@@ -53,14 +59,15 @@
       "slug": "sun-signs-2",
       "style": "character-comic",
       "lead": "zeep",
-      "status": "draft",
+      "status": "scheduled",
       "postiz_ids": {
-        "instagram": "cmwl0316x06smns089lnphd7z",
+        "instagram": "cmwv458wx08pip907c8mhrcsz",
         "facebook": "cmwl0318706snns0889wymsuz",
         "tumblr": "cmwl0319306sons08027hom37",
         "bluesky": "cmwl0319r06spns08fqrhnjfw"
       },
-      "note": "Covers Zeep, Jix, Shimmer (Morrie ran in Part 1 socials). Email's Trinity mention left out of socials. Revised per Steph: page 5 host swapped from Starsi to Zeep so Zeep hosts throughout."
+      "note": "Covers Zeep, Jix, Shimmer (Morrie ran in Part 1 socials). Email's Trinity mention left out of socials. Revised per Steph: page 5 host swapped from Starsi to Zeep so Zeep hosts throughout.",
+      "ig_note": "Instagram post re-created 2026-11-24 after the IG channel was reconnected (old IG posts were deleted)."
     },
     {
       "email_date": "2026-12-29",
@@ -68,14 +75,15 @@
       "slug": "year-of-connection",
       "style": "comic-book",
       "lead": "princette",
-      "status": "draft",
+      "status": "scheduled",
       "postiz_ids": {
-        "instagram": "cmwti5cxm01tjnx078eo5n9ja",
-        "facebook": "cmwti5cyc01tknx07jh26iqrh",
-        "tumblr": "cmwti5cyw01tlnx07j8w6mh83",
-        "bluesky": "cmwti5czn01tnnx07fcxagxqd"
+        "instagram": "cmwv458xo08pjp907wv6nub26",
+        "facebook": "cmwv45q1y08pop9078530lept",
+        "tumblr": "cmwv45q2m08ppp907691sbapw",
+        "bluesky": "cmwv45q3b08pqp907lpvnnwjs"
       },
-      "note": "Year-end thank-you note. Princette hosts cover, p2 and CTA; Zeep p3, Jix/Shimmer/Morrie p4, Starsi p5; whole crew (no Trinity) on CTA."
+      "note": "Year-end thank-you note. Princette hosts cover, p2 and CTA; Zeep p3, Jix/Shimmer/Morrie p4, Starsi p5; whole crew (no Trinity) on CTA.",
+      "ig_note": "Instagram post re-created 2026-11-24 after the IG channel was reconnected (old IG posts were deleted)."
     },
     {
       "email_date": "2027-01-15",
@@ -83,7 +91,11 @@
       "slug": "rumblies",
       "style": "comic-book",
       "lead": "shimmer",
-      "status": "scheduled"
+      "status": "scheduled",
+      "postiz_ids": {
+        "instagram": "cmwv458ye08pkp907k1ao793v"
+      },
+      "ig_note": "Instagram post re-created 2026-11-24 after the IG channel was reconnected (old IG posts were deleted)."
     }
   ]
 }
