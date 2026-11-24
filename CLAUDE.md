@@ -1,6 +1,6 @@
 # CLF weekly zine run: runbook
 
-This repo turns each weekly Cute Little Fuckers (CLF) email into a 6-page zine and schedules it as **draft** posts in Postiz. Steph (founder and toy designer) reviews and approves every post. **Never publish or schedule live; always create drafts.**
+This repo turns each weekly Cute Little Fuckers (CLF) email into a 6-page zine and schedules the posts in Postiz. Steph (founder and toy designer; uses they/them) reviews each week's zine after it's scheduled. **Always use `type: "schedule"` for the email's date. Never use `type: "now"`; never post immediately.**
 
 The run happens every Monday morning (Pacific).
 
@@ -45,8 +45,8 @@ Follow the **Style guide** below.
 3. Load each page with Postiz `uploadFromUrlTool` (in order 1–6) and keep the returned `path` values.
 4. Verify all six uploaded, then **delete `pages/<dir>/`**, commit and push. Postiz keeps its own copies.
 
-## 4. Create the Postiz drafts
-Use `integrationSchedulePostTool` with `type: "draft"`. The date is the email's date at **10:00 AM Pacific**:
+## 4. Schedule the Postiz posts
+Use `integrationSchedulePostTool` with `type: "schedule"` (Steph approved direct scheduling on 2026-11-24). The date is the email's date at **10:00 AM Pacific**:
 - PST (Nov–early Mar) = 18:00Z
 - PDT = 17:00Z
 - Sale or launch posts can go at 8:00 AM.
@@ -69,7 +69,7 @@ Content is HTML: wrap every paragraph in `<p>` and escape `&` as `&amp;`.
 Example hashtags: `#sexualwellness #genderinclusive #queerjoy #comicart #zine #cutelittlefuckers` plus 2–3 for the topic.
 
 ## 5. Log and report
-1. Add the zine to `log.json` with `email_date`, `title`, `slug`, `style`, `lead`, `status: "draft"` and the Postiz post IDs.
+1. Add the zine to `log.json` with `email_date`, `title`, `slug`, `style`, `lead`, `status: "scheduled"` and the Postiz post IDs.
 2. Commit `kit/<file>.html` and `log.json`, then push.
 3. Send Steph **one message** (use SendUserMessage; also push-notify if available) with:
    - the email and date
@@ -78,7 +78,7 @@ Example hashtags: `#sexualwellness #genderinclusive #queerjoy #comicart #zine #c
    - the Instagram previewUrl
    - anything that needs a decision, such as an email placeholder like "INSERT SHIPPING INFO" or a risky claim
 
-   Tell her the posts are drafts and she needs to schedule them in Postiz.
+   Tell them the posts are scheduled, and that they can edit or delete any of them in Postiz before the publish time.
 
 ## Style guide (summary of the project doc "CLF Zine Style Guide & Build Method")
 **Format:**
